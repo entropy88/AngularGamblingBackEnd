@@ -16,7 +16,7 @@ userRoute.route('/add-user').post((req, res, next) => {
   })
 });
 
-//get all users
+//get all users//this must return array length only
 userRoute.route('/get-users').get((req, res) => {
   User.find({}, function (err, users) {
     if (err)
