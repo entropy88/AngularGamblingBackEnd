@@ -21,7 +21,7 @@ userRoute.route('/get-users').get((req, res) => {
   User.find({}, function (err, users) {
     if (err)
       return next(err);
-    res.json(users)
+    res.json(users.length)
 });
 })
 
