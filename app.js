@@ -22,6 +22,7 @@ mongoose.connect(dataBaseConfig.db, {
 const userRoute = require('./routes/user.route');
 const feedbackRoute=require('./routes/feedback.route');
 const chapterRoute=require('./routes/chapter.route');
+const downloadRoute=require('./routes/download.route');
 
 const app = express();
 app.use(bodyParser.json());
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'dist/angular8-meanstack-angular-mat
 app.use('/api', userRoute);
 app.use('/api', feedbackRoute);
 app.use('/api',chapterRoute);
+app.use('/api', downloadRoute);
 
 // PORT
 const port = process.env.PORT || 8000;
