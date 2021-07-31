@@ -26,8 +26,8 @@ userRoute.route('/get-users').get((req, res) => {
 })
 
 //find user
-userRoute.route('/get-user/:email').get((req, res) => {
-  User.find({"email":req.params.email}, function (err, user) {
+userRoute.route('/get-user/:username').get((req, res) => {
+  User.find({"username":req.params.username}, function (err, user) {
     if (err)
       return next(err);
     res.json(user[0])
