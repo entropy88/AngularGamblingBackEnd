@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // Define collection and schema
 let Feedback = new Schema({
 
-  email: {
+  username: {
     type: String,
     required: true
   },
