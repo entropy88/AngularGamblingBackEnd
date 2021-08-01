@@ -28,9 +28,6 @@ feedbackRoute.route('/get-feedback').get((req, res) => {
  });
 
 
-
-
-
 //upadte feedback
 feedbackRoute.route('/update-feedback/:id').put((req, res, next) => {
  Feedback.findByIdAndUpdate(req.params.id, {
@@ -45,6 +42,20 @@ feedbackRoute.route('/update-feedback/:id').put((req, res, next) => {
     }
   })
 })
+
+//delete
+feedbackRoute.route('/delete-feedback/:id').get((req,res,next)=>{
+  Feedback.findByIdAndDelete(req.params.id,(error)=>{
+    if (error){
+      console.log(error);
+      return next(error)
+    } else {
+ 
+      return res.send("Removed");
+    }
+  })
+})
+
 
 
 
