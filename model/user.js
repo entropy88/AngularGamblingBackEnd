@@ -18,7 +18,11 @@ let User = new Schema({
   chapterSave: {
     type: String,
     default:"0"
-  }
+  }, 
+  registrationDate: {
+    type: String,
+    required: true
+    }
 })
 
 module.exports = mongoose.model('User', User)
