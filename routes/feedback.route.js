@@ -27,6 +27,16 @@ feedbackRoute.route('/get-feedback').get((req, res) => {
 
  });
 
+ //get singular
+ feedbackRoute.route('/get-feedback/:id').get((req, res) => {
+  Feedback.findOne({"_id":req.params.id}, function (err, feedback) {
+    if (err)
+      return next(err);
+    res.json(feedback)
+});
+
+ });
+
 
 //upadte feedback
 feedbackRoute.route('/update-feedback/:id').put((req, res, next) => {
