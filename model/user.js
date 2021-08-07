@@ -22,6 +22,9 @@ let User = new Schema({
   registrationDate: {
     type: String,
     required: true
+    },
+    profilePicture:{
+      type:String
     }
 })
 
