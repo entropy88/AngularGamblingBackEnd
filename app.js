@@ -23,6 +23,7 @@ const userRoute = require('./routes/user.route');
 const feedbackRoute=require('./routes/feedback.route');
 const chapterRoute=require('./routes/chapter.route');
 const downloadRoute=require('./routes/download.route');
+const counterRoute=require('./routes/counter.route');
 
 const app = express();
 app.use(bodyParser.json());
@@ -40,6 +41,7 @@ app.use('/api', userRoute);
 app.use('/api', feedbackRoute);
 app.use('/api',chapterRoute);
 app.use('/api', downloadRoute);
+app.use('/api', counterRoute);
 
 // PORT
 const port = process.env.PORT || 8000;
