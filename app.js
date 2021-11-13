@@ -24,6 +24,7 @@ const feedbackRoute=require('./routes/feedback.route');
 const chapterRoute=require('./routes/chapter.route');
 const downloadRoute=require('./routes/download.route');
 const counterRoute=require('./routes/counter.route');
+const beerRoute=require('./routes/beers.route')
 
 const app = express();
 app.use(bodyParser.json());
@@ -42,6 +43,7 @@ app.use('/api', feedbackRoute);
 app.use('/api',chapterRoute);
 app.use('/api', downloadRoute);
 app.use('/api', counterRoute);
+app.use('/api', beerRoute);
 
 // PORT
 const port = process.env.PORT || 8000;
