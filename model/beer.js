@@ -8,10 +8,18 @@ let Beer = new Schema({
     type: String,
     required: true
   },
-  type:{
-      type: String,
-      required: true
+  type: {
+    type: String,
+    required: true
   },
+  packages: {
+    type: Array,
+    required: true
+  },
+  rating: {
+    type: Number,
+    required: true
+  }
 
 })
 

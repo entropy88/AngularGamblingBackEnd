@@ -28,14 +28,14 @@ beerRoute.route('/get-beers').get((req, res) => {
  });
 
  //get singular
-//  feedbackRoute.route('/get-feedback/:id').get((req, res) => {
-//   Feedback.findOne({"_id":req.params.id}, function (err, feedback) {
-//     if (err)
-//       return next(err);
-//     res.json(feedback)
-// });
+ beerRoute.route('/get-beer/:id').get((req, res, next) => {
+  Beer.findOne({"_id":req.params.id}, function (err, beer) {
+    if (err)
+      return next(err);
+    res.json(beer)
+});
 
-//  });
+ });
 
 
 //upadte feedback
