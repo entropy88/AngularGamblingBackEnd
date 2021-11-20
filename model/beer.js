@@ -19,6 +19,22 @@ let Beer = new Schema({
   rating: {
     type: Number,
     required: true
+  },
+
+  imgUrl: {
+    type:String,
+    required: true
+  }
+  ,
+
+  alcVol: {
+    type: Number,
+    required:true
+  },
+
+  ownerId: {
+    type: String,
+    required: true
   }
 
 })
