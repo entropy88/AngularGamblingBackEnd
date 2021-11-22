@@ -8,6 +8,11 @@ let Beer = new Schema({
     type: String,
     required: true
   },
+  ownerId: {
+    type: String,
+    required: true,
+    default: 'admin'
+  },
   type: {
     type: String,
     required: true
@@ -16,24 +21,24 @@ let Beer = new Schema({
     type: Array,
     required: true
   },
+
   rating: {
-    type: Number,
+    type: Array,
     required: true
   },
 
   imgUrl: {
     type:String,
     required: true
-  }
-  ,
+  },
 
   alcVol: {
     type: Number,
     required:true
   },
 
-  ownerId: {
-    type: String,
+  country: {
+    type:String,
     required: true
   }
 

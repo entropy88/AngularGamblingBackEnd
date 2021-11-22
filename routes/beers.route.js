@@ -6,16 +6,16 @@ const beerRoute = express.Router();
 let Beer = require('../model/beer');
 
 
-// feedbackRoute.route('/add-feedback').post((req, res, next) => {
-//  Feedback.create(req.body, (error, data) => {
-//     if (error) {
-//       return next(error)
-//     } else {
-//       console.log(data)
-//       res.json(data)
-//     }
-//   })
-// });
+beerRoute.route('/add-beer').post((req, res, next) => {
+ Beer.create(req.body, (error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      console.log(data)
+      res.json(data)
+    }
+  })
+});
 
 //https://stackoverflow.com/questions/29852208/best-practice-for-structuring-express-routes-that-handle-mongodb-queries
 beerRoute.route('/get-beers').get((req, res) => {
