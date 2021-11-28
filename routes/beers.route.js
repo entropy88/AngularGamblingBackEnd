@@ -38,20 +38,20 @@ beerRoute.route('/get-beers').get((req, res) => {
  });
 
 
-//upadte feedback
-// feedbackRoute.route('/update-feedback/:id').put((req, res, next) => {
-//  Feedback.findByIdAndUpdate(req.params.id, {
-//     $set: req.body
-//   }, (error, data) => {
-//     if (error) {
-//       return next(error);
-//       console.log(error)
-//     } else {
-//       res.json(data)
-//       console.log('feedback successfully updated!')
-//     }
-//   })
-// })
+//upadte beer
+beerRoute.route('/update-beer/:id').put((req, res, next) => {
+ Beer.findByIdAndUpdate(req.params.id, {
+    $set: req.body
+  }, (error, data) => {
+    if (error) {
+      return next(error);
+      console.log(error)
+    } else {
+      res.json(data)
+      console.log('beer successfully updated!')
+    }
+  })
+})
 
 //delete
 beerRoute.route('/delete-beer/:id').get((req,res,next)=>{
