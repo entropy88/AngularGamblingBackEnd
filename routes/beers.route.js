@@ -54,17 +54,16 @@ beerRoute.route('/get-beers').get((req, res) => {
 // })
 
 //delete
-// feedbackRoute.route('/delete-feedback/:id').get((req,res,next)=>{
-//   Feedback.findByIdAndDelete(req.params.id,(error)=>{
-//     if (error){
-//       console.log(error);
-//       return next(error)
-//     } else {
- 
-//       return res.send("Removed");
-//     }
-//   })
-// })
+beerRoute.route('/delete-beer/:id').get((req,res,next)=>{
+  Beer.findByIdAndDelete(req.params.id,(error)=>{
+    if (error){
+      console.log(error);
+      return next(error)
+    } else { 
+      return res.send("Removed");
+    }
+  })
+})
 
 
 
