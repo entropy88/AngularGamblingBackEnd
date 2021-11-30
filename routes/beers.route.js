@@ -45,7 +45,7 @@ beerRoute.route('/update-beer/:id').put((req, res, next) => {
   }, (error, data) => {
     if (error) {
       return next(error);
-      console.log(error)
+   
     } else {
       res.json(data)
       console.log('beer successfully updated!')
